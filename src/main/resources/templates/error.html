@@ -1,0 +1,58 @@
+<html>
+<head th:replace="common/header :: common-header" />
+<head>
+	
+</head>
+<body>
+	<nav th:replace="common/navbar :: common-navbar" />
+<div class="container container-fluid">
+    <div class="row">
+        <h1>Something went wrong</h1>
+	<table class="table">
+		<tr>
+			<td>Date</td>
+			<td th:text="${timestamp}" />
+		</tr>
+		<tr>
+			<td>Path</td>
+			<td th:text="${path}" />
+		</tr>
+		<tr>
+			<td>Error</td>
+			<td th:text="${error}" />
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td th:text="${status}" />
+		</tr>
+		<tr>
+			<td>Message</td>
+			<td th:text="${message}" />
+		</tr>
+		<tr>
+			<td>Exception</td>
+			<td th:text="${exception}" />
+		</tr>
+		<tr>
+			<td>Trace</td>
+			<td>
+				<pre th:text="${trace}" />
+			</td>
+		</tr>
+
+	</table>
+
+	
+			<div style="margin-top: 10px; margin-left: 50px">
+				<a href="/myapp/users"><button type="button" class="btn btn-success">Back to home screen</button></a>
+			</div>
+			
+		
+	</div>
+        
+    </div>
+</div>
+</body>
+</html>
+
+</html>

@@ -1,0 +1,45 @@
+<html>
+<head th:replace="common/header :: common-header" />
+<body>
+<nav th:replace="common/navbar :: common-navbar" />
+<div class="container" style="max-width:800px">
+    <div class="row">
+        <div style="margin-top:50px;">
+        <h1> 
+        	 <div class="jumbotron">
+	  			 <h6 class="display-6">Welcome to Access-management System</h6>
+        </h1>
+        </div>
+    </div>
+    
+   <table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Role</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>ADMIN</td>
+      <td>The default role when account is created.</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>EMPLOYEE</td>
+      <td>Employee role will be able to manage employee list.</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>MANAGER</td>
+      <td>Manager role will be given to managers.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    
+</div>
+</body>
+</html>

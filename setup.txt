@@ -1,0 +1,8 @@
+1. This application uses MySql Database. You need to create a Database.
+CREATE DATABASE `login_system` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+
+2. Data and tables will be auto populated through Hibernate and startup Sql(Refer data.sql & Schema.sql)
+
+3. Default url when application starts is http://localhost:8080/myapp/
+
+4. Change DB Username and password with your configuration in application.properties

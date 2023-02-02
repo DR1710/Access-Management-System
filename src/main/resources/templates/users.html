@@ -1,0 +1,65 @@
+<html>
+<head th:replace="common/header :: common-header" />
+
+<body>
+
+<nav th:replace="common/navbar :: common-navbar" />
+
+<div class="container">
+
+	<br />
+	<div sec:authorize ="hasRole('EMPLOYEE')">
+		<!-- Add a link to point to /employee/list ... this is for the employees -->
+		<p>
+			<a href="/myapp/employees/list">Employee Management</a>
+			(Only for Employee management users) 	
+			This content is only shown to users with EMPLOYEE role
+		</p>
+	</div>
+	
+	<div sec:authorize ="hasRole('MANAGER')">
+		<br />
+		<!-- Add a link to point to /managers ... this is for the managers -->
+		<p>
+			<a href="/myapp/managers">Managers screen</a>
+			(Only for management) 	
+			This content is only shown to users with MANAGER role
+		</p>
+	</div>
+	
+	
+    <div class="row">
+        <h1> Registered Users </h1>
+    </div>
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="user: ${users}">
+                <td th:text="${user.firstName}"></td>
+                <td th:text="${user.lastName}"></td>
+                <td th:text="${user.email}"></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    
+	
+	<hr />
+	
+	 <span sec:authorize="isAuthenticated()">
+		| Logged user: <span sec:authentication="name"></span> |
+		Roles: <span sec:authentication="principal.authorities"></span> |
+	</span>
+	
+
+	
+	
+</div>
+</body>
+</html>
